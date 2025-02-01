@@ -1,14 +1,14 @@
 context:
   name: mkdocs-marimo
-  version: 0.1.2
+  version: "0.2.0"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-- url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/mkdocs_marimo-${{ version }}.tar.gz
-  sha256: 9ac2fb08850f2f0f5ab01d06673b18425e678be660d5493ab7e7810993e60fce
+  - url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/mkdocs_marimo-${{ version }}.tar.gz
+    sha256: 2e67f94d712b7259019cadbea84a814ef4251a68f5f389e606160ac00b89df4f
 
 build:
   script: python -m pip install . -vv
@@ -17,14 +17,14 @@ build:
 
 requirements:
   host:
-  - python >=3.9
-  - pip
-  - hatchling
+    - python >=3.9
+    - pip
+    - hatchling
   run:
-  - python >=3.9
-  - htmlmin >=0.1.12,<0.2
-  - marimo >=0.8.15
-  - mkdocs >=1.5.2,<2
+    - python >=3.9
+    - htmlmin >=0.1.12,<0.2
+    - marimo >=0.8.15
+    - mkdocs >=1.5.2,<2
 
 tests:
   - python:

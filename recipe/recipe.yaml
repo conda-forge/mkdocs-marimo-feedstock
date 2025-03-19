@@ -1,6 +1,6 @@
 context:
   name: mkdocs-marimo
-  version: "0.2.0"
+  version: "0.2.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/mkdocs_marimo-${{ version }}.tar.gz
-    sha256: 2e67f94d712b7259019cadbea84a814ef4251a68f5f389e606160ac00b89df4f
+    sha256: 9e4cf8005b79856beb3e9db48e7c8fa7f94a5d00c05aa6877f44a173c0ec9bb0
 
 build:
   script: python -m pip install . -vv
